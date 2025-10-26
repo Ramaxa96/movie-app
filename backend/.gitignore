@@ -1,0 +1,29 @@
+# Виртуальное окружение Python
+/venv/
+/env/
+/virtual/
+/bin/
+/include/
+/lib/
+/share/
+
+# Кэш и скомпилированные файлы Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Локальная база данных (для разработки)
+db.sqlite3
+*.sqlite3
+
+# Файлы переменных окружения для бэкенда
+.env
+
+# Папки, создаваемые инструментами тестирования
+.pytest_cache/
+.coverage
+
+# Локальные настройки Django/Flask
+local_settings.py
+instance/
