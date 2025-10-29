@@ -1,0 +1,35 @@
+@use '@/styles/helpers/main.scss' as *;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(0) rem(160);
+    column-gap: 1rem;
+    width: 100vw;
+    height: rem(100);
+    background: black;
+    color: var(--color-white-100);
+
+    a {
+        text-decoration: none;
+        color: var(--color-white-100);
+    }
+
+    &__title {
+        font-size: rem(32);
+        font-weight: 500;
+    }
+
+    &__menu-list {
+        display: flex;
+        align-items: center;
+        font-size: rem(20);
+        column-gap: rem(100);
+    }
+
+    &__menu-actions {
+        @include flex-center;
+        column-gap: rem(55);
+    }
+}

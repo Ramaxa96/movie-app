@@ -1,0 +1,27 @@
+@import '@/styles/helpers/main.scss';
+
+.hero {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    min-height: rem(770);
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+        color: var(--color-white-100);
+        padding: rem(50) rem(120);
+        box-sizing: border-box;
+        gap: rem(40);
+
+        &-title {
+            display: flex;
+            min-height: rem(150);
+            font-size: rem(64);
+            text-align: center;
+            line-height: rem(75);
+        }
+    }
+}
