@@ -13,8 +13,8 @@ const Header = () => {
                 </ul>
             </nav>
             <div className="header__menu-actions">
-                <Button>Поддержать</Button>
-                <Button>Войти</Button>
+                <Button size="sm" color="gradient-orange" className="menu_actions-button-donate">Поддержать</Button>
+                <Button size="sm" color="blue" className="menu_actions-button-enter">Войти</Button>
             </div>
         </header>
     )

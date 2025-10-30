@@ -8,12 +8,12 @@
     column-gap: 1rem;
     width: 100vw;
     height: rem(100);
-    background: black;
+    background: linear-gradient(270deg, var(--color-pink-50), var(--color-pink-90));
     color: var(--color-white-100);
 
     a {
         text-decoration: none;
-        color: var(--color-white-100);
+        color: var(--color-white-10);
     }
 
     &__title {

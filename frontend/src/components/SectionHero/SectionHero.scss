@@ -2,7 +2,7 @@
 
 .hero {
     display: flex;
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     min-height: rem(770);
 
@@ -11,7 +11,7 @@
         align-items: center;
         flex-direction: column;
         width: 50%;
-        color: var(--color-white-100);
+        color: var(--color-white-10);
         padding: rem(50) rem(120);
         box-sizing: border-box;
         gap: rem(40);
@@ -22,6 +22,7 @@
             font-size: rem(64);
             text-align: center;
             line-height: rem(75);
+            font-weight: 500;
         }
     }
 }

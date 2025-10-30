@@ -29,7 +29,7 @@ const SectionHero = () => {
             <div className="hero__inner">
                 <h1 className='hero__inner-title'>{`${heroText}`}</h1>
                 <img className='hero__inner-image' src={heroImage} alt="Hero moodie image" />
-                <Button>Подобрать фильм</Button>
+                <Button size="lg" color="gradient-blue" className="hero__innger-button">Подобрать фильм</Button>
             </div>
         </section>
     )
