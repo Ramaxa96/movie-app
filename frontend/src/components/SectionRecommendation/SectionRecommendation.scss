@@ -1,0 +1,100 @@
+@import '@/styles/helpers/main.scss';
+
+.section-recommend {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    min-height: rem(770);
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: rem(95);
+        color: var(--color-white-10);
+        width: 80%;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: rem(40);
+        margin-top: rem(40);
+    }
+
+    &__slider {
+        display: flex;
+        column-gap: rem(120);
+        width: 100%;
+        height: rem(500);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border-radius: rem(12) rem(12) 0 0;
+        height: 100%;
+        max-width: rem(330);
+        min-width: rem(250);
+        min-height: rem(370)
+    }
+
+    &__rating {
+        @include flex-center;
+
+        position: absolute;
+        background: var(--color-green-80);
+        min-width: rem(40);
+        min-height: rem(40);
+        border-radius: rem(12);
+        left: rem(12);
+        top: rem(10);
+    }
+
+    &__poster {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+
+        &-image {
+            display: flex;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__info {
+        display: flex;
+        width: 100%;
+        height: rem(85);
+        background: linear-gradient(270deg, var(--color-blue-100), var(--color-purple-70));
+        border-radius: 0 0 rem(12) rem(12);
+        margin-top: rem(-10);
+    }
+
+    &__details {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 40%;
+        height: 100%;
+        padding-left: rem(12);
+
+        &-desc {
+            font-size: rem(14);
+        }
+
+        &-title {
+            font-weight: bold
+        }
+    }
+
+    &__interaction {
+        @include flex-center;
+        
+        box-sizing: border-box;
+        padding: rem(10) rem(0);
+        width: 60%;
+        height: 100%;
+    }
+}
