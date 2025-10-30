@@ -8,7 +8,13 @@ class Movie(BaseModel):
     year: int
     rating: float
     genres: List[str]
+    countries: List[str]
 
 class UserPreferences(BaseModel):
     genres: List[str]
-    min_rating: float = 0.0
+    countries: List[str]
+    years: List[int]
+
+class PaginatedMoviesResponse(BaseModel):
+    total_count: int
+    movies: List[Movie]
