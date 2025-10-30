@@ -1,13 +1,15 @@
 import './App.scss'
 
-import Header from "./styles/components/Header/Header"
-import SectionHero from './styles/components/SectionHero/SectionHero'
+import SectionRecommendation from './components/SectionRecommendation/SectionRecommendation'
+import Header from "./components/Header/Header"
+import SectionHero from './components/SectionHero/SectionHero'
 
 const App = () => {
   return (
     <>
       <Header />  
       <SectionHero />
+      <SectionRecommendation />
     </>
   )
 }
