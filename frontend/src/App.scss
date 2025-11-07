@@ -1,0 +1,8 @@
+@import './styles/helpers/main.scss';
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-purple-80);
+    font-family: 'Gotham';
+}

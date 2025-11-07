@@ -1,0 +1,80 @@
+@import '@/styles/helpers/main.scss';
+
+.button {
+  @include flex-center;
+
+  position: relative;
+  width: fit-content;
+  border-radius: rem(12);
+  color: var(--color-white-10);
+  background: var(--color-blue-60);
+  padding: rem(0) rem(24);
+  border: none;
+  // box-shadow: 0px 4px 8px -1px var(--color-blue-60);
+  font-size: rem(20);
+  overflow: hidden;
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+
+
+  &--sm {
+      padding: rem(0) rem(24);
+      min-height: rem(44);
+      border-radius: rem(12);
+    }
+
+    &--md {
+      padding: rem(0) rem(32);
+      min-height: rem(52);
+      border-radius: rem(32);
+    }
+
+    &--lg {
+      text-wrap: nowrap;
+      padding: rem(34) rem(64);
+      min-height: rem(100);
+      border-radius: rem(32);
+      font-size: rem(32);
+    }
+
+    &--gradient-orange {
+      @include buttonGradientHover(var(--color-yellow-50), var(--color-yellow-90));
+
+      background: linear-gradient(90deg, var(--color-yellow-50), var(--color-yellow-90));
+    }
+
+    &--gradient-blue-pink {
+        @include buttonGradientHover(var(--color-pink-50), var(--color-blue-60));
+
+        background: linear-gradient(90deg, var(--color-pink-50), var(--color-blue-60));
+    }
+
+    &--gradient-blue {
+       @include buttonGradientHover(var(--color-blue-40) 70%, var(--color-blue-50));
+
+        background: linear-gradient(135deg, var(--color-blue-50) 70%, var(--color-blue-40));
+      }
+
+    &--gradient-pink-blue {
+       @include buttonGradientHover(var(--color-blue-50) 70%, var(--color-pink-70));
+
+        background: linear-gradient(90deg, var(--color-pink-70) 70%, var(--color-blue-50));
+      }
+    
+
+    &--blue {
+      background: var(--color-blue-50);
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        background: var(--color-blue-60)
+      }
+
+      &:active {
+        background: var(--color-blue-70);
+      }
+    }
+  }

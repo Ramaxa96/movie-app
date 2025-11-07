@@ -1,0 +1,44 @@
+@import '@/styles/helpers/main.scss';
+
+.hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    min-height: rem(770);
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        color: var(--color-white-10);
+        padding: rem(50) rem(120);
+        box-sizing: border-box;
+        gap: rem(40);
+    }
+
+    &__title {
+        display: flex;
+        min-height: rem(150);
+        font-size: rem(64);
+        text-align: center;
+        line-height: rem(75);
+        font-weight: 500;
+    }
+
+    &__image {
+        min-width: rem(640);
+        max-width: rem(940);
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+        padding-inline: rem(160);
+        width: 100%;
+        height: rem(100);
+        column-gap: rem(175);
+    }
+}
