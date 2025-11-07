@@ -1,0 +1,28 @@
+@import '@/styles/helpers/main.scss';
+
+.button-next,
+.button-prev {
+    @include flex-center;
+
+    background: var(--color-purple-70);
+    width: rem(70);
+    height: rem(70);
+    border-radius: 50%;
+    border: none;
+    transition: all 0.1s ease-in;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.button-next {
+    &::before {
+        content: url('../../assets/icons/arrow-right.png')
+    }
+}
+
+.button-prev {
+    &::before {
+        content: url('../../assets/icons/arrow-left.png')
+    }
+}
