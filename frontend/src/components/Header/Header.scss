@@ -5,9 +5,9 @@
     align-items: center;
     justify-content: space-between;
     padding: rem(0) rem(160);
-    column-gap: 1rem;
-    width: 100vw;
+    column-gap: rem(32);
     height: rem(100);
+    width: 100vw;
     background: linear-gradient(270deg, var(--color-pink-50), var(--color-pink-90));
     color: var(--color-white-100);
 
@@ -31,5 +31,19 @@
     &__menu-actions {
         @include flex-center;
         column-gap: rem(55);
+    }
+}
+
+@media(max-width: 1550px) {
+    .header {
+    
+        &__menu-list {
+            font-size: rem(18);
+            column-gap: rem(45);
+        }
+
+        &__menu-actions {
+            column-gap: rem(35);
+        }
     }
 }
