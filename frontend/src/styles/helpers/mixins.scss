@@ -49,3 +49,7 @@
     opacity: 1;
   }
 }
+
+@mixin borderRadius() {
+  border-radius: rem(10);
+}
