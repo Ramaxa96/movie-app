@@ -27,10 +27,19 @@ const SectionHero = () => {
     return (
         <section className="hero">
             <div className="hero__inner">
-                <h1 className='hero__inner-title'>{`${heroText}`}</h1>
-                <img className='hero__inner-image' src={heroImage} alt="Hero moodie image" />
-                <Button size="lg" color="gradient-blue" className="hero__innger-button">Подобрать фильм</Button>
+                <h1 className='hero__title'>{`${heroText}`}</h1>
+                <img 
+                className='hero__image' 
+                src={heroImage} 
+                alt="Hero moodie image"
+                loading='lazy' 
+                />
             </div>
+                <div className="hero__actions">
+                    <Button size="lg" color="gradient-pink-blue" className="hero__button">Подобрать фильм</Button>
+                    <Button size="lg" color="gradient-blue-pink" className="hero__button">Подобрать фильм</Button>
+                    <Button size="lg" color="gradient-blue" className="hero__button">Похожие фильмы</Button>
+                </div>
         </section>
     )
 }
