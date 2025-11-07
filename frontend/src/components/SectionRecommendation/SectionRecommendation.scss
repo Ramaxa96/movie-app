@@ -1,100 +1,105 @@
 @import '@/styles/helpers/main.scss';
 
+
 .section-recommend {
     display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
     width: 100%;
-    justify-content: center;
+    padding-inline: rem(96);
+    margin-top: rem(130);
     min-height: rem(770);
+    color: var(--color-white-10);
 
-    &__inner {
+    &__header {
         display: flex;
-        flex-direction: column;
-        gap: rem(95);
-        color: var(--color-white-10);
-        width: 80%;
+        justify-content: space-between;
+        width: rem(1600);
+        padding-right: rem(32);
     }
 
     &__title {
         font-weight: 500;
         font-size: rem(40);
-        margin-top: rem(40);
     }
 
     &__slider {
         display: flex;
-        column-gap: rem(120);
+        justify-content: center;
+        align-items: center;
+        margin-top: rem(64);
+        position: relative;
+        height: fit-content;
+    }
+
+    &__button-prev {
+        margin-right: rem(32);
+    }
+
+    &__offers {
+        display: flex;
         width: 100%;
-        height: rem(500);
+        max-width: rem(1550);
+        height: 100%;
+        gap: rem(40);
     }
 
     &__item {
         display: flex;
         flex-direction: column;
         position: relative;
-        border-radius: rem(12) rem(12) 0 0;
-        height: 100%;
-        max-width: rem(330);
-        min-width: rem(250);
-        min-height: rem(370)
-    }
+        width: rem(270);
+        height: rem(480);
 
-    &__rating {
-        @include flex-center;
+        &:last-of-type {
+            clip-path: inset(0% rem(32) 0% 0%)
+        }
 
-        position: absolute;
-        background: var(--color-green-80);
-        min-width: rem(40);
-        min-height: rem(40);
-        border-radius: rem(12);
-        left: rem(12);
-        top: rem(10);
-    }
+        &-poster {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            width: 100%;
+            height: rem(420);
 
-    &__poster {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
+        }
 
         &-image {
-            display: flex;
+            border-radius: rem(24);
+            cursor: pointer;
             width: 100%;
             height: auto;
         }
-    }
 
-    &__info {
-        display: flex;
-        width: 100%;
-        height: rem(85);
-        background: linear-gradient(270deg, var(--color-blue-100), var(--color-purple-70));
-        border-radius: 0 0 rem(12) rem(12);
-        margin-top: rem(-10);
-    }
+        &-rating {
+            @include flex-center;
 
-    &__details {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 40%;
-        height: 100%;
-        padding-left: rem(12);
+            position: absolute;
+            background: var(--color-green-80);
+            min-width: rem(40);
+            min-height: rem(40);
+            border-radius: rem(12);
+            left: rem(20);
+            bottom: rem(25);
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: rem(15);
+            width: 100%;
+            height: rem(75);
+        }
 
         &-desc {
             font-size: rem(14);
         }
 
         &-title {
+            font-size: rem(18);
             font-weight: bold
         }
-    }
-
-    &__interaction {
-        @include flex-center;
-        
-        box-sizing: border-box;
-        padding: rem(10) rem(0);
-        width: 60%;
-        height: 100%;
     }
 }
