@@ -6,13 +6,13 @@ const Button = (props) => {
         children,
         size = "md",
         color = "blue",
+        type = 'button',
+        onClick,
     } = props
 
     return (
-        <button className={`button button--${size} button--${color} ${className}`}>
-            <span>
+        <button onClick={onClick} type={type} className={`button button--${size} button--${color} ${className}`}>
             {children}
-            </span>
         </button>
     )
 }

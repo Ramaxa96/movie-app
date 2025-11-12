@@ -13,6 +13,7 @@
   // box-shadow: 0px 4px 8px -1px var(--color-blue-60);
   font-size: rem(20);
   overflow: hidden;
+  transition: all 0.2s ease-in;
 
   span {
     position: relative;
@@ -41,25 +42,25 @@
     }
 
     &--gradient-orange {
-      @include buttonGradientHover(var(--color-yellow-50), var(--color-yellow-90));
+      // @include buttonGradientHover(var(--color-yellow-50), var(--color-yellow-90));
 
       background: linear-gradient(90deg, var(--color-yellow-50), var(--color-yellow-90));
     }
 
     &--gradient-blue-pink {
-        @include buttonGradientHover(var(--color-pink-50), var(--color-blue-60));
+        // @include buttonGradientHover(var(--color-pink-50), var(--color-blue-60));
 
         background: linear-gradient(90deg, var(--color-pink-50), var(--color-blue-60));
     }
 
     &--gradient-blue {
-       @include buttonGradientHover(var(--color-blue-40) 70%, var(--color-blue-50));
+      //  @include buttonGradientHover(var(--color-blue-40) 70%, var(--color-blue-50));
 
         background: linear-gradient(135deg, var(--color-blue-50) 70%, var(--color-blue-40));
       }
 
     &--gradient-pink-blue {
-       @include buttonGradientHover(var(--color-blue-50) 70%, var(--color-pink-70));
+      //  @include buttonGradientHover(var(--color-blue-50) 70%, var(--color-pink-70));
 
         background: linear-gradient(90deg, var(--color-pink-70) 70%, var(--color-blue-50));
       }
@@ -76,5 +77,16 @@
       &:active {
         background: var(--color-blue-70);
       }
+    }
+
+    &--pink {
+      background: var(--color-pink-60);
+    }
+
+    &:hover {
+      filter: brightness(130%);
+    }
+    &.active {
+      filter: brightness(130%);
     }
   }
