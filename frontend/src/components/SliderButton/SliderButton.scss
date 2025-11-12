@@ -15,6 +15,10 @@
     }
 }
 
+.hidden {
+    @include hide;
+}
+
 .button-next {
     &::before {
         content: url('../../assets/icons/arrow-right.png')
