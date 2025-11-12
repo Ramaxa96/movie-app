@@ -1,17 +1,15 @@
-import './App.scss'
+import AppRouters from './components/AppRouters/AppRouters';
+import Header from './components/Header/Header'
 
-import SectionRecommendation from './components/SectionRecommendation/SectionRecommendation'
-import Header from "./components/Header/Header"
-import SectionHero from './components/SectionHero/SectionHero'
-import SectionSelection from './components/SectionSelection/SectionSelection'
+import { BrowserRouter } from "react-router";
 
 const App = () => {
   return (
     <>
-      <Header />  
-      <SectionHero />
-      <SectionSelection />
-      <SectionRecommendation />
+      <Header />
+      <BrowserRouter>
+        <AppRouters />
+      </BrowserRouter>
     </>
   )
 }

@@ -1,3 +1,10 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-purple-80);
+    font-family: 'Gotham';
+}
+
 *,
 ::before,
 ::after {
@@ -111,6 +118,9 @@ button {
   stroke: currentColor;
 }
 
+a {
+  text-decoration: none;
+}
 
 svg * {
   transition-property: fill, stroke;
