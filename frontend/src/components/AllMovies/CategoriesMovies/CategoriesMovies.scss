@@ -1,0 +1,42 @@
+@import '@/styles/helpers/main.scss';
+
+.categories {
+    display: flex;
+    padding: rem(130) rem(160);
+
+    &__list {
+        display: flex;
+        gap: rem(32);
+    }
+
+    &__dropdown {
+        position: relative;
+
+        &.open {
+            width: rem(240);
+            height: fit-content;
+
+            .dropdown__button {
+                margin-top: -40%;
+            }
+        }
+
+    }
+
+    &__button {
+
+        &.active {
+            background: var(--color-white-20);
+            color: var(--color-pink-90);
+            font-weight: 500;
+        }
+    }
+
+    &__clear {
+        font-size: rem(24);
+        color: var(--color-white-10);
+        font-weight: 500;
+        background: none;
+        border: none;
+    }
+}
