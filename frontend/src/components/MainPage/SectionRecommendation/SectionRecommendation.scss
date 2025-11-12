@@ -1,0 +1,138 @@
+@import '@/styles/helpers/main.scss';
+
+
+.section-recommend {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    padding-inline: rem(96);
+    margin-top: rem(130);
+    min-height: rem(770);
+    color: var(--color-white-10);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        width: rem(1600);
+        padding-right: rem(32);
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: rem(40);
+    }
+
+    &__slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: rem(64);
+        position: relative;
+        height: fit-content;
+    }
+
+    &__offers {
+        display: flex;
+        width: 100%;
+        max-width: rem(1605);
+        height: 100%;
+        gap: rem(40);
+    }
+
+    .recommend-item {
+        display: flex;
+        flex-direction: column;
+        width: rem(270);
+        height: rem(480);
+
+        &:last-of-type {
+            clip-path: inset(0% rem(32) 0% 0%)
+        }
+
+        &__poster {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            height: rem(420);
+
+            &.hover {
+                .recommend-item {
+                        &__image {
+                            filter: blur(2px);
+                        }
+
+                        &__rating {
+                            top: rem(14);
+                            bottom: auto;
+                            z-index: 1;
+                        }
+
+                        &__button-detail,
+                        &__button-favorite {
+                            @include show;
+                        }
+                    }
+            }
+        }
+        &__image {
+            border-radius: rem(24);
+            width: 100%;
+            height: auto;
+        }
+
+        &__rating {
+            @include flex-center;
+
+            position: absolute;
+            background: var(--color-green-80);
+            min-width: rem(40);
+            min-height: rem(40);
+            border-radius: rem(12);
+            left: rem(14);
+            bottom: rem(25);
+        }
+
+        &__button-detail,
+        &__button-favorite {
+            position: absolute;
+            z-index: 1;
+            @include hide;
+        }
+
+        &__button-detail {
+            bottom: rem(30);
+        }
+
+        &__button-favorite {
+
+            border-radius: rem(8);
+            border: none;
+            background: url('@/assets/icons/favorite-heart.png') center/50% no-repeat, linear-gradient(90deg, var(--color-pink-50), var(--color-blue-60));
+            width: rem(42);
+            height: rem(36);
+            right: rem(14);
+            top: rem(14);
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: rem(15);
+            width: 100%;
+            height: rem(75);
+        }
+        
+        &__subtitle {
+            font-size: rem(18);
+            font-weight: bold
+        }
+
+        &__desc {
+            font-size: rem(14);
+        }
+    }
+}
