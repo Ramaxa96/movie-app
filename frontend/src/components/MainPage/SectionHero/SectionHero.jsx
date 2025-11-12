@@ -1,7 +1,7 @@
 import './SectionHero.scss'
 import heroImage from '@/assets/image/hero.svg'
 
-import Button from '../Button/Button'
+import Button from '../../Button/Button'
 
 import { useEffect, useMemo, useState } from 'react'
 import { homeGreetings } from '@/data.js'

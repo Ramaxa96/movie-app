@@ -2,21 +2,25 @@
 
 .selection {
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 100%;
     height: rem(335);
     margin-top: rem(128);
-    padding-inline: rem(96);
+
+    &__header {
+        display: flex;
+        width: rem(1600);
+    }
 
     &__title {
         font-size: rem(40);
         color: var(--color-white-10);
-        margin-left: rem(64);
     }
 
     &__slider {
         @include flex-center;
-
+        gap: rem(32);
         width: 100%;
         height: 100%;
     }
@@ -25,16 +29,9 @@
         display: flex;
         align-items: flex-end;
         width: auto;
-        max-width: rem(1550);
+        width: rem(1605);
         height: 100%;
         gap: rem(40);
-    }
-    
-    &__button-prev {
-        margin-right: rem(32);
-    }
-    
-    &__button-next {
     }
 
     &__card {

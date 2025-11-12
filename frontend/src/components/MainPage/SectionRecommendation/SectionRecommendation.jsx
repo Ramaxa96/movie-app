@@ -1,10 +1,12 @@
 import './SectionRecommendation.scss'
 
-import SliderButtonNext from '../SliderButton/SliderButtonNext'
-import SliderButtonPrev from '../SliderButton/SliderButtonPrev'
+import SliderButtonNext from '@/components/SliderButton/SliderButtonNext'
+import SliderButtonPrev from '@/components/SliderButton/SliderButtonPrev'
 import SliderItem from './SliderItem'
-import Button from '../Button/Button'
+import Button from '@/components/Button/Button'
 
+
+import { NavLink } from 'react-router'
 import { useEffect, useState } from 'react'
 import useSlider from '@/hooks/useSlider'
 
@@ -24,10 +26,12 @@ const SectionRecommendation = () => {
         <section className="section-recommend">
             <div className='section-recommend__header'>
             <h2 className="section-recommend__title">Все фильмы</h2>
+            <NavLink to="/all-movies" end>
                 <Button size="md" color="gradient-pink-blue" className="section-recommend__button-films">Ко всем фильмам</Button>
+            </NavLink>
             </div>
                 <div className="section-recommend__slider">
-                    {firstSliderCard > 0 && <SliderButtonPrev className="section-recommend__button-prev" handleClick={prevCard}/>}
+                    <SliderButtonPrev className={`section-recommend__button-prev ${firstSliderCard > 1 ? '' : 'hidden'}`} handleClick={prevCard}/>
                     <div className="section-recommend__offers">
                         {
                             itemMovies

@@ -1,7 +1,7 @@
 import './SectionSelection.scss'
 
-import SliderButtonNext from '../SliderButton/SliderButtonNext'
-import SliderButtonPrev from '../SliderButton/SliderButtonPrev'
+import SliderButtonNext from '../../SliderButton/SliderButtonNext'
+import SliderButtonPrev from '../../SliderButton/SliderButtonPrev'
 import SelectionCard from './SelectionCard'
 
 import useSlider from '@/hooks/useSlider'
@@ -13,9 +13,11 @@ const SectionSelection = () => {
 
    return (
       <section className="selection">
-         <h2 className="selection__title">Подборки фильмов</h2>
+         <div className="selection__header">
+            <h2 className="selection__title">Подборки фильмов</h2>
+         </div>
          <div className="selection__slider">
-            {firstSelectionCard > 1 && <SliderButtonPrev className="selection__button-prev" handleClick={prevCard}/>}
+            <SliderButtonPrev className={`selection__button-prev ${firstSelectionCard > 1 ? '' : 'hidden'}`} handleClick={prevCard}/>
             <div className="selection__offers">
                <SelectionCard />
                <SelectionCard />
